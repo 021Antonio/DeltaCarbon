@@ -25,7 +25,7 @@ def create_card(icon, number, description):
     )
 
 # Carregar a imagem e converter para base64
-with open("./Ellipse2.png", "rb") as image_file:
+with open("./wind1.png", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 
 # Criar o card
