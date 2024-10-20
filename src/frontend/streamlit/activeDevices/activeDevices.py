@@ -3,11 +3,10 @@ from PIL import Image
 from io import BytesIO
 import base64
 
-# Função para criar o card com um círculo ao redor da imagem
 def create_card(icon, number, description):
     st.markdown(
         f"""
-        <div style="border-radius: 10px; padding: 10px; background-color: #F0F0F0; width: 300px; height: 150px; display: flex; align-items: center; justify-content: center;">
+        <div style="border-radius: 10px; padding: 10px; background-color: transparent; width: 300px; height: 150px; display: flex; align-items: center; justify-content: center; border: none;">
             <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
                 <div style="border-radius: 50%; width: 90px; height: 90px; background-color: #238F8526; display: flex; align-items: center; justify-content: center;">
                     <img src="data:image/png;base64,{icon}" width="60" height="60">
@@ -24,7 +23,6 @@ def create_card(icon, number, description):
         unsafe_allow_html=True
     )
 
-# Carregar a imagem e converter para base64
 with open("./wind1.png", "rb") as image_file:
     encoded_string = base64.b64encode(image_file.read()).decode()
 
