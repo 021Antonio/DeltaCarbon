@@ -26,13 +26,13 @@ const PieChart: React.FC = () => {
         borderColor: 'red',
         backgroundColor: (context: any) => {
           const ctx = context.chart.ctx;
-          const gradient = ctx.createLinearGradient(0, 0, 0, 180); // Ajuste do gradiente vertical
-          gradient.addColorStop(0, 'rgba(255, 99, 132, 0.3)'); // Parte superior
-          gradient.addColorStop(1, 'rgba(255, 99, 132, 0)'); // Parte inferior
+          const gradient = ctx.createLinearGradient(0, 0, 0, 180); 
+          gradient.addColorStop(0, 'rgba(255, 99, 132, 0.3)'); 
+          gradient.addColorStop(1, 'rgba(255, 99, 132, 0)'); 
           return gradient;
         },
         fill: true,
-        tension: 0.4, // Suaviza a linha
+        tension: 0.4, 
         pointBorderColor: 'red',
         pointBackgroundColor: 'white',
         pointBorderWidth: 2,
@@ -44,13 +44,13 @@ const PieChart: React.FC = () => {
         borderColor: 'green',
         backgroundColor: (context: any) => {
           const ctx = context.chart.ctx;
-          const gradient = ctx.createLinearGradient(0, 0, 0, 180); // Ajuste do gradiente vertical
-          gradient.addColorStop(0, 'rgba(75, 192, 192, 0.3)'); // Parte superior
-          gradient.addColorStop(1, 'rgba(75, 192, 192, 0)'); // Parte inferior
+          const gradient = ctx.createLinearGradient(0, 0, 0, 180); 
+          gradient.addColorStop(0, 'rgba(75, 192, 192, 0.3)'); 
+          gradient.addColorStop(1, 'rgba(75, 192, 192, 0)'); 
           return gradient;
         },
         fill: true,
-        tension: 0.4, // Suaviza a linha
+        tension: 0.4, 
         pointBorderColor: 'green',
         pointBackgroundColor: 'white',
         pointBorderWidth: 2,
@@ -68,7 +68,7 @@ const PieChart: React.FC = () => {
         position: 'top' as const,
         labels: {
           usePointStyle: true,
-          color: '#fff', // Cor branca para a legenda
+          color: '#fff', 
         },
       },
       title: {
@@ -77,7 +77,7 @@ const PieChart: React.FC = () => {
         font: {
           size: 18,
         },
-        color: '#fff', // Cor branca para o título
+        color: '#fff', 
         padding: {
           top: 10,
           bottom: 30,
@@ -94,25 +94,25 @@ const PieChart: React.FC = () => {
             }
             return tickValue;
           },
-          color: '#fff', // Cor branca para os valores do eixo Y
+          color: '#fff', 
         },
         grid: {
-          color: 'rgba(255,255,255,0.1)', // Grid mais sutil
+          color: 'rgba(255,255,255,0.1)', 
         },
       },
       x: {
         grid: {
-          display: false, // Removendo grid vertical
+          display: false, 
         },
         ticks: {
-          color: '#fff', // Cor branca para os meses (eixo X)
+          color: '#fff', 
         },
       },
     },
   };
 
   return (
-    <div className="bg-gradient-to-b from-teal-700 to-teal-900 p-5 rounded-xl shadow-lg w-[734px] h-[255.49px]">
+    <div className="bg-gradient-to-b from-teal-700 to-teal-900 p-5 rounded-xl shadow-lg w-[734px] h-[255.49px] m-5">
       <Line data={data} options={options} />
     </div>
   );

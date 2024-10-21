@@ -16,23 +16,23 @@ const CarbonReduced: React.FC<CarbonReducedProps> = ({ percent, descriptionTop, 
     datasets: [
       {
         data: [percent, 100 - percent],
-        backgroundColor: ['#4CAF50', '#E0E0E0'], // Verde e cinza claro
+        backgroundColor: ['#4CAF50', '#E0E0E0'],
         borderWidth: 0,
-        cutout: '70%', // Tamanho do buraco no centro
+        cutout: '70%',
       },
     ],
   };
 
   const options = {
     plugins: {
-      tooltip: { enabled: false }, // Desativa tooltip
-      legend: { display: false },  // Remove legenda
+      tooltip: { enabled: false },
+      legend: { display: false },
     },
     maintainAspectRatio: false,
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-4" style={{ width: '340.47px', height: '335.97px' }}>
+    <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-4 m-5" style={{ width: '340.47px', height: '335.97px' }}>
       <div className="relative" style={{ width: '150px', height: '150px' }}>
         <Doughnut data={data} options={options} />
         <div className="absolute inset-0 flex flex-col items-center justify-center">

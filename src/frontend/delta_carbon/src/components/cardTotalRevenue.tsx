@@ -10,7 +10,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  Filler // Para preenchimento abaixo das linhas
+  Filler
 );
 
 const CardTotalRevenue: React.FC = () => {
@@ -25,13 +25,13 @@ const CardTotalRevenue: React.FC = () => {
         borderColor: 'red',
         backgroundColor: (context: ScriptableContext<'line'>) => {
           const ctx = context.chart.ctx;
-          const gradient = ctx.createLinearGradient(0, 0, 0, 100); // Altura ajustada
-          gradient.addColorStop(0, 'rgba(255, 99, 132, 0.2)'); // Início do preenchimento
-          gradient.addColorStop(1, 'rgba(255, 99, 132, 0)'); // Fim do preenchimento
+          const gradient = ctx.createLinearGradient(0, 0, 0, 100);
+          gradient.addColorStop(0, 'rgba(255, 99, 132, 0.2)');
+          gradient.addColorStop(1, 'rgba(255, 99, 132, 0)');
           return gradient;
         },
         fill: true,
-        tension: 0.45, // Curvas mais suaves
+        tension: 0.45,
         pointBorderColor: 'red',
         pointBackgroundColor: 'white',
         pointBorderWidth: 2,
@@ -43,13 +43,13 @@ const CardTotalRevenue: React.FC = () => {
         borderColor: 'green',
         backgroundColor: (context: ScriptableContext<'line'>) => {
           const ctx = context.chart.ctx;
-          const gradient = ctx.createLinearGradient(0, 0, 0, 100); // Altura ajustada
-          gradient.addColorStop(0, 'rgba(75, 192, 192, 0.2)'); // Início do preenchimento
-          gradient.addColorStop(1, 'rgba(75, 192, 192, 0)'); // Fim do preenchimento
+          const gradient = ctx.createLinearGradient(0, 0, 0, 100);
+          gradient.addColorStop(0, 'rgba(75, 192, 192, 0.2)');
+          gradient.addColorStop(1, 'rgba(75, 192, 192, 0)');
           return gradient;
         },
         fill: true,
-        tension: 0.45, // Curvas mais suaves
+        tension: 0.45,
         pointBorderColor: 'green',
         pointBackgroundColor: 'white',
         pointBorderWidth: 2,
@@ -87,7 +87,7 @@ const CardTotalRevenue: React.FC = () => {
         ticks: {
           callback: function (tickValue: string | number) {
             if (typeof tickValue === 'number') {
-              return tickValue; // Apenas exibe os números no eixo Y
+              return tickValue;
             }
             return tickValue;
           },
@@ -97,7 +97,7 @@ const CardTotalRevenue: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-4" style={{ width: '733.92px', height: '335.97px' }}>
+    <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-4 m-5" style={{ width: '733.92px', height: '335.97px' }}>
       <Line data={data} options={options} />
     </div>
   );

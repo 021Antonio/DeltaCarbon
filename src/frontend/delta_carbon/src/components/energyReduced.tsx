@@ -14,23 +14,23 @@ const EnergyReduced: React.FC<EnergyReducedProps> = ({ reduced, description }) =
     datasets: [
       {
         data: [reduced, 100 - reduced],
-        backgroundColor: ['#1E88E5', '#BBDEFB'], // Azul escuro e azul claro
+        backgroundColor: ['#1E88E5', '#BBDEFB'], 
         borderWidth: 0,
-        cutout: '70%', // Tamanho do buraco no centro
+        cutout: '70%', 
       },
     ],
   };
 
   const options = {
     plugins: {
-      tooltip: { enabled: false }, // Desativa tooltip
-      legend: { display: false },  // Remove legenda
+      tooltip: { enabled: false }, 
+      legend: { display: false },  
     },
     maintainAspectRatio: false,
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-4" style={{ width: '339px', height: '255px' }}>
+    <div className="flex flex-col items-center justify-center bg-white rounded-lg shadow-lg p-4 m-5" style={{ width: '339px', height: '255px' }}>
       <div className="relative" style={{ width: '150px', height: '150px' }}>
         <Doughnut data={data} options={options} />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
