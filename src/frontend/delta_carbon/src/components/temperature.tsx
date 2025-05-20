@@ -9,7 +9,7 @@ interface TemperatureProps {
 const Temperature: React.FC<TemperatureProps> = ({ icon, temperature, description }) => {
   return (
     <div className="flex items-center justify-center bg-white rounded-lg shadow-lg p-2 w-full h-full m-2">
-      <div className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full">
+      <div className="flex items-center justify-center w-14 h-14 bg-green-100 rounded-full">
         <img src={icon} alt="icon" className="w-8 h-8" />
       </div>
       <div className="ml-2 text-center">
